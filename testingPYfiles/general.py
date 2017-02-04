@@ -3,6 +3,11 @@ indicoio.config.api_key = '3e3f2adccd348bdf2408f8c539a77b8b'
 
 def main():
 # how is the client feeling
+    cllient = {'unique_id':{'General':{'feeling':0,'really_feeling':'0'},'depression':{'time':0,'insomnia':0,
+                                                                                       'friends':{},'comfort':0,
+                                                                                       'engaged':0, 'hobby_focus':0,
+                                                                                       'general_focus':0}
+        ,'anxiety':{'something_emotions':{}},'eating':{'energetic':0,'weight':0,'social_image':{}}}}
     myinput = input('How are you feeling right now? Tell me all the details! \n') # can use hq sentiment
     out1 = indicoio.sentiment_hq(myinput) # element 1 is first hq
     client = [out1]
